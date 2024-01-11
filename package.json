@@ -1,0 +1,72 @@
+{
+  "name": "weeb3-stack",
+  "description": "Template web3 app with next, bun, and weeb things",
+  "version": "0.0.1",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "author": {
+    "name": "DK",
+    "email": "dk3@premia.finance",
+    "url": "https://defi.ceo"
+  },
+  "contributors": [
+    {
+      "name": "dk",
+      "url": "https://twitter.com/dk3anon"
+    }
+  ],
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "dev:turbo": "turbo run dev",
+    "build": "turbo run build",
+    "start": "next start",
+    "test": "turbo run test",
+    "typecheck": "turbo run typecheck",
+    "lint": "eslint . && manypkg check",
+    "lint:fix": "eslint --fix && manypkg fix",
+    "lint:fixjs": "eslint --fix \"**/*.{js,jsx,ts,tsx}\"",
+    "lint:turbo": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md,js,json}\"",
+    "clean": "turbo run clean:dependency && git clean -xdf node_modules",
+    "clean:dependency": "rm -rf node_modules app/**/node_modules bun.lockb app/**/bun.lockb",
+    "release": "changeset version"
+  },
+  "dependencies": {
+    "@changesets/changelog-github": "^0.4.8",
+    "@changesets/cli": "^2.26.1",
+    "@manypkg/cli": "^0.20.0",
+    "@types/bun": "^1.0.1",
+    "@types/eslint": "^8.44.2",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@typescript-eslint/eslint-plugin": "^6.7.0",
+    "@typescript-eslint/parser": "^6.7.0",
+    "autoprefixer": "^10.0.1",
+    "bufferutil": "^4.0.7",
+    "bun": "^1.0.22",
+    "encoding": "^0.1.13",
+    "eslint": "^8",
+    "eslint-config-next": "14.0.4",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-config-turbo": "^1.10.14",
+    "lokijs": "^1.5.12",
+    "next": "14.0.4",
+    "pino-pretty": "^10.2.0",
+    "postcss": "^8",
+    "prettier": "^3.1.1",
+    "react": "^18",
+    "react-dom": "^18",
+    "supports-color": "^9.4.0",
+    "tailwindcss": "^3.3.0",
+    "turbo": "latest",
+    "typescript": "^5",
+    "utf-8-validate": "^6.0.3",
+    "viem": "^2.0.6",
+    "wagmi": "2.1.1"
+  },
+  "engines": {
+    "bun": ">=1.0.0"
+  }
+}
