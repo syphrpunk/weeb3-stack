@@ -1,0 +1,3 @@
+[submodule "packages/anvil.js"]
+	path = packages/anvil.js
+	url = https://github.com/wevm/anvil.js/
