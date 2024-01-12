@@ -6,10 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "clean": "turbo run clean:dependency && git clean -xdf node_modules",
+    "clean:dependency": "rm -rf node_modules app/**/node_modules bun.lockb app/**/bun.lockb"
   },
   "dependencies": {
-    "@tanstack/react-query": "5.0.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "next": "13.5.3",

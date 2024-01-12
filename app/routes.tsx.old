@@ -1,0 +1,8 @@
+export const routes = {
+    index: '/',
+    "wagmi-project": '/wagmi',
+    dynamic: '/dynamic',
+    web: '/next',
+  } as const;
+  
+  export type RouteKey = keyof typeof routes;

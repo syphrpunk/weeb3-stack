@@ -15,6 +15,9 @@
       "url": "https://twitter.com/dk3anon"
     }
   ],
+  "workspaces": [
+    "app/*"
+  ],
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -28,7 +31,7 @@
     "lint:fixjs": "eslint --fix \"**/*.{js,jsx,ts,tsx}\"",
     "lint:turbo": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md,js,json}\"",
-    "clean": "turbo run clean:dependency && git clean -xdf node_modules",
+    "clean": "turbo run clean:dependency && git clean -xdf node_modules && git clean -xdf bun.lockb",
     "clean:dependency": "rm -rf node_modules app/**/node_modules bun.lockb app/**/bun.lockb",
     "release": "changeset version"
   },
@@ -36,6 +39,7 @@
     "@changesets/changelog-github": "^0.4.8",
     "@changesets/cli": "^2.26.1",
     "@manypkg/cli": "^0.20.0",
+    "@tanstack/react-query": "^5.17.9",
     "@types/bun": "^1.0.1",
     "@types/eslint": "^8.44.2",
     "@types/minimist": "^1.2.5",
@@ -59,6 +63,8 @@
     "lucide-react": "^0.309.0",
     "minimist": "^1.2.8",
     "next": "14.0.4",
+    "next-compose-plugins": "^2.2.1",
+    "next-pwa": "^5.6.0",
     "pino-pretty": "^10.2.0",
     "postcss": "^8",
     "prettier": "^3.1.1",
@@ -71,8 +77,8 @@
     "turbo": "latest",
     "typescript": "^5",
     "utf-8-validate": "^6.0.3",
-    "viem": "^2.0.6",
-    "wagmi": "2.1.1"
+    "viem": "2.x",
+    "wagmi": "^2.1.2"
   },
   "engines": {
     "bun": ">=1.0.0"
